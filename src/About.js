@@ -8,7 +8,7 @@ function About() {
         {`
           /* Background */
           .about-container {
-            background: url("https://img.freepik.com/free-vector/bright-gradient-background-geometric-colorful_361591-4613.jpg?t=st=1740377100~exp=1740380700~hmac=43bb91a868993c49e16aebb6532873f2b7803e6110a98bebbeebd59da06e4609&w=2000") 
+            background: url("https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-playful-portfolio-pink-memphis-image_593415.jpg") 
                         no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
@@ -18,35 +18,36 @@ function About() {
             align-items: center;
             text-align: center;
             padding: 50px 20px;
-            color: white;
+            color: black;
             animation: fadeIn 1.5s ease-in-out;
           }
 
           /* Glassmorphism Effect */
           .glass-box {
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-            margin-bottom: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeIn 1.5s ease-in-out;
-          }
+    max-width: 600px;
+    background: rgba(135, 206, 250, 0.3); /* Sky Blue with transparency */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(135, 206, 250, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+}
 
-          .glass-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
-          }
+.glass-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(135, 206, 250, 0.4);
+}
+
 
           /* Profile Image */
           .profile-img {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 3px solid white;
+            border: 3px solid black;
             margin-bottom: 20px;
             animation: fadeIn 1.5s ease-in-out;
           }
@@ -72,12 +73,12 @@ function About() {
 
           .certificates {
             text-decoration: none;
-            color: white;
+            color: black;
             transition: color 0.3s ease;
           }
 
           .certificates:hover {
-            color: lightblue;
+            color: blue;
           }
 
           /* Fade-in Animation */

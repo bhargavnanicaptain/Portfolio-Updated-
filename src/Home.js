@@ -17,8 +17,57 @@ function Home() {
           justify-content: center;
           align-items: center;
           height: 100vh;
-          background: url("https://img.freepik.com/free-vector/bright-gradient-background-geometric-colorful_361591-4613.jpg?t=st=1740377100~exp=1740380700~hmac=43bb91a868993c49e16aebb6532873f2b7803e6110a98bebbeebd59da06e4609&w=2000") no-repeat center/cover;
+          background: url("https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-playful-portfolio-pink-memphis-image_593415.jpg") 
+            no-repeat center/cover;
           padding: 20px;
+          position: relative;
+          overflow: hidden;
+        }
+
+        /* Animated Dotted Overlay */
+        .dots-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1%, transparent 10%);
+          background-size: 80px 80px;
+          mix-blend-mode: overlay;
+          animation: moveDots 8s linear infinite;
+          opacity: 0.6; /* Adjust transparency */
+        }
+
+        /* Keyframes for Dots Animation */
+        @keyframes moveDots {
+          0% {
+            transform: translateX(0) translateY(0);
+          }
+          50% {
+            transform: translateX(20px) translateY(20px);
+          }
+          100% {
+            transform: translateX(0) translateY(0);
+          }
+        }
+
+        /* Glassmorphic Card */
+        .glass-card {
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(10px);
+          border-radius: 15px;
+          padding: 30px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          color: black;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          max-width: 450px;
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          animation: slideIn 1s ease-out;
+          z-index: 2;
         }
 
         /* Slide-in animation */
@@ -33,23 +82,6 @@ function Home() {
           }
         }
 
-        .glass-card {
-          background: rgba(255, 255, 255, 0.15);
-          backdrop-filter: blur(8px);
-          border-radius: 15px;
-          padding: 30px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-          text-align: center;
-          color: white;
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          max-width: 450px;
-          width: 90%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          animation: slideIn 1s ease-out;
-        }
-
         .name-container {
           display: flex;
           align-items: center;
@@ -59,7 +91,7 @@ function Home() {
 
         .linkedin {
           text-decoration: none;
-          color: white;
+          color: black;
           font-weight: bold;
         }
 
@@ -155,6 +187,10 @@ function Home() {
       `}</style>
 
       <div className="home-container">
+        {/* Dots animation layer */}
+        <div className="dots-overlay"></div>
+
+        {/* Glassmorphic Card */}
         <div className="glass-card">
           {/* Profile Image */}
           <div className="profile-container">
