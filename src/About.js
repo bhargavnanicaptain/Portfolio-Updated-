@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImage from "./assets/profile.png"; // Add your profile image
+import ProfileImage from "./assets/profile.jpg"; // Add your profile image
 
 function About() {
   return (
@@ -8,7 +8,7 @@ function About() {
         {`
           /* Background */
           .about-container {
-            background: url("https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-playful-portfolio-pink-memphis-image_593415.jpg") 
+            background: url("https://img.freepik.com/free-vector/simple-gradient-background-vector-winter-blue_53876-105767.jpg?t=st=1744023151~exp=1744026751~hmac=586aaafad948cdec543318e824328801634e3bda50234d95cb776b5d4cfc9642&w=1380") 
                         no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
@@ -42,15 +42,23 @@ function About() {
 }
 
 
-          /* Profile Image */
-          .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid black;
-            margin-bottom: 20px;
-            animation: fadeIn 1.5s ease-in-out;
-          }
+.profile-img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border: 4px solid black;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
 
           /* Section Title */
           .section-title {

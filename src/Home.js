@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImage from "./assets/profile.png";
+import ProfileImage from "./assets/profile.jpg";
 
 function Home() {
   return (
@@ -11,20 +11,20 @@ function Home() {
           padding: 0;
           box-sizing: border-box;
         }
-        
+
         .home-container {
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100vh;
-          background: url("https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-abstract-playful-portfolio-pink-memphis-image_593415.jpg") 
-            no-repeat center/cover;
+          background-image: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          background-size: cover;
+          background-position: center;
           padding: 20px;
           position: relative;
           overflow: hidden;
         }
 
-        /* Animated Dotted Overlay */
         .dots-overlay {
           position: absolute;
           top: 0;
@@ -35,23 +35,15 @@ function Home() {
           background-size: 80px 80px;
           mix-blend-mode: overlay;
           animation: moveDots 8s linear infinite;
-          opacity: 0.6; /* Adjust transparency */
+          opacity: 0.6;
         }
 
-        /* Keyframes for Dots Animation */
         @keyframes moveDots {
-          0% {
-            transform: translateX(0) translateY(0);
-          }
-          50% {
-            transform: translateX(20px) translateY(20px);
-          }
-          100% {
-            transform: translateX(0) translateY(0);
-          }
+          0% { transform: translate(0, 0); }
+          50% { transform: translate(20px, 20px); }
+          100% { transform: translate(0, 0); }
         }
 
-        /* Glassmorphic Card */
         .glass-card {
           background: rgba(255, 255, 255, 0.2);
           backdrop-filter: blur(10px);
@@ -70,7 +62,6 @@ function Home() {
           z-index: 2;
         }
 
-        /* Slide-in animation */
         @keyframes slideIn {
           from {
             transform: translateX(-100%);
@@ -80,23 +71,6 @@ function Home() {
             transform: translateX(0);
             opacity: 1;
           }
-        }
-
-        .name-container {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 1.5rem;
-        }
-
-        .linkedin {
-          text-decoration: none;
-          color: black;
-          font-weight: bold;
-        }
-
-        .linkedin:hover {
-          color: skyblue;
         }
 
         .profile-container {
@@ -109,14 +83,35 @@ function Home() {
 
         .profile {
           border: 3px solid white;
-          border-radius: 50%;
-          width: 90px;
-          height: 90px;
-          transition: transform 0.3s ease-in-out;
+          border-radius: 16px;
+          width: 220px;
+          height: 280px;
+          object-fit: cover;
+          transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
         }
 
         .profile:hover {
-          transform: scale(1.2);
+          transform: scale(1.1);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+          filter: brightness(1.1);
+        }
+
+        .name-container {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 1.5rem;
+          margin-top: 10px;
+        }
+
+        .linkedin {
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+        }
+
+        .linkedin:hover {
+          color: skyblue;
         }
 
         .description {
@@ -136,7 +131,24 @@ function Home() {
           margin-left: 5px;
         }
 
-        /* Responsive Design */
+        .attribution {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          font-size: 0.7rem;
+          color: #333;
+          z-index: 1;
+        }
+
+        .attribution a {
+          color: #333;
+          text-decoration: none;
+        }
+
+        .attribution a:hover {
+          color: skyblue;
+        }
+
         @media (max-width: 768px) {
           .glass-card {
             padding: 20px;
@@ -144,8 +156,8 @@ function Home() {
           }
 
           .profile {
-            width: 70px;
-            height: 70px;
+            width: 120px;
+            height: 160px;
           }
 
           .name-container {
@@ -168,8 +180,8 @@ function Home() {
           }
 
           .profile {
-            width: 60px;
-            height: 60px;
+            width: 100px;
+            height: 130px;
           }
 
           .name-container {
@@ -187,34 +199,30 @@ function Home() {
       `}</style>
 
       <div className="home-container">
-        {/* Dots animation layer */}
         <div className="dots-overlay"></div>
 
-        {/* Glassmorphic Card */}
         <div className="glass-card">
-          {/* Profile Image */}
           <div className="profile-container">
             <img src={ProfileImage} alt="Your Profile" className="profile" />
           </div>
 
-          {/* Name and LinkedIn */}
           <div className="name-container">
             <span>I am</span>
             <a href="https://www.linkedin.com/in/vtbhargav/" className="linkedin">V.T. BHARGAV</a>
           </div>
 
-          {/* Description */}
           <p className="description">
             A passionate Full Stack Developer and RPA Enthusiast, currently working at Sonata Software.
           </p>
 
-          {/* Sonata Logo */}
           <div className="logo-container">
             <a href="https://www.sonata-software.com/">
               <img src="https://seeklogo.com/images/S/sonata-software-logo-2D77F170A2-seeklogo.com.png" className="logo" />
             </a>
           </div>
         </div>
+
+        
       </div>
     </div>
   );
