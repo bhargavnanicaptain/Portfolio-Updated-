@@ -96,24 +96,6 @@ function Home() {
           filter: brightness(1.1);
         }
 
-        .name-container {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 1.5rem;
-          margin-top: 10px;
-        }
-
-        .linkedin {
-          text-decoration: none;
-          color: black;
-          font-weight: bold;
-        }
-
-        .linkedin:hover {
-          color: skyblue;
-        }
-
         .description {
           font-size: 1rem;
           margin-top: 10px;
@@ -149,7 +131,6 @@ function Home() {
           color: skyblue;
         }
 
-        /* Larger screens */
         @media (min-width: 1200px) {
           .glass-card {
             max-width: 500px;
@@ -161,10 +142,6 @@ function Home() {
             height: 300px;
           }
 
-          .name-container {
-            font-size: 2rem;
-          }
-
           .description {
             font-size: 1.1rem;
           }
@@ -174,7 +151,6 @@ function Home() {
           }
         }
 
-        /* Medium desktops and tablets */
         @media (max-width: 992px) {
           .glass-card {
             max-width: 400px;
@@ -186,10 +162,6 @@ function Home() {
             height: 260px;
           }
 
-          .name-container {
-            font-size: 1.4rem;
-          }
-
           .description {
             font-size: 0.95rem;
           }
@@ -199,7 +171,6 @@ function Home() {
           }
         }
 
-        /* Tablets and large phones */
         @media (max-width: 768px) {
           .glass-card {
             padding: 20px;
@@ -211,10 +182,6 @@ function Home() {
             height: 200px;
           }
 
-          .name-container {
-            font-size: 1.2rem;
-          }
-
           .description {
             font-size: 0.9rem;
           }
@@ -224,7 +191,6 @@ function Home() {
           }
         }
 
-        /* Small phones */
         @media (max-width: 480px) {
           .glass-card {
             padding: 15px;
@@ -234,10 +200,6 @@ function Home() {
           .profile {
             width: 110px;
             height: 140px;
-          }
-
-          .name-container {
-            font-size: 1rem;
           }
 
           .description {
@@ -258,10 +220,7 @@ function Home() {
             <img src={ProfileImage} alt="Your Profile" className="profile" />
           </div>
 
-          <div className="name-container">
-            <span>I am</span>
-            <a href="https://www.linkedin.com/in/vtbhargav/" className="linkedin">V.T. BHARGAV</a>
-          </div>
+          {/* Name section removed here */}
 
           <p className="description">
             A passionate Full Stack Developer and RPA Enthusiast, currently working at Sonata Software.
