@@ -6,7 +6,7 @@ const skillsData = [
         category: 'Programming Languages',
         skills: [
             { name: 'Java', img: 'https://static-00.iconduck.com/assets.00/java-icon-512x512-kvr1nudq.png' },
-            { name: 'C#', img: 'https://i.pinimg.com/736x/52/85/4b/52854be7602f3b1db549ea52ae1d3d94.jpg' }
+            { name: 'c-sharp', img: 'https://i.pinimg.com/736x/52/85/4b/52854be7602f3b1db549ea52ae1d3d94.jpg' }
         ]
     },
     {
