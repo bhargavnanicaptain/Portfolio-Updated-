@@ -149,6 +149,57 @@ function Home() {
           color: skyblue;
         }
 
+        /* Larger screens */
+        @media (min-width: 1200px) {
+          .glass-card {
+            max-width: 500px;
+            padding: 40px;
+          }
+
+          .profile {
+            width: 240px;
+            height: 300px;
+          }
+
+          .name-container {
+            font-size: 2rem;
+          }
+
+          .description {
+            font-size: 1.1rem;
+          }
+
+          .logo {
+            height: 50px;
+          }
+        }
+
+        /* Medium desktops and tablets */
+        @media (max-width: 992px) {
+          .glass-card {
+            max-width: 400px;
+            padding: 30px;
+          }
+
+          .profile {
+            width: 200px;
+            height: 260px;
+          }
+
+          .name-container {
+            font-size: 1.4rem;
+          }
+
+          .description {
+            font-size: 0.95rem;
+          }
+
+          .logo {
+            height: 35px;
+          }
+        }
+
+        /* Tablets and large phones */
         @media (max-width: 768px) {
           .glass-card {
             padding: 20px;
@@ -156,8 +207,8 @@ function Home() {
           }
 
           .profile {
-            width: 120px;
-            height: 160px;
+            width: 150px;
+            height: 200px;
           }
 
           .name-container {
@@ -173,6 +224,7 @@ function Home() {
           }
         }
 
+        /* Small phones */
         @media (max-width: 480px) {
           .glass-card {
             padding: 15px;
@@ -180,8 +232,8 @@ function Home() {
           }
 
           .profile {
-            width: 100px;
-            height: 130px;
+            width: 110px;
+            height: 140px;
           }
 
           .name-container {
@@ -217,12 +269,10 @@ function Home() {
 
           <div className="logo-container">
             <a href="https://www.sonata-software.com/">
-              <img src="https://seeklogo.com/images/S/sonata-software-logo-2D77F170A2-seeklogo.com.png" className="logo" />
+              <img src="https://seeklogo.com/images/S/sonata-software-logo-2D77F170A2-seeklogo.com.png" className="logo" alt="Sonata Logo" />
             </a>
           </div>
         </div>
-
-        
       </div>
     </div>
   );
